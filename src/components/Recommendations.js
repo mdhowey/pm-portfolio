@@ -53,7 +53,13 @@ export const Recommendations = () => {
         <p><b>Eric</b> Lead Instructor @ General Assembly</p>
       </Container>
       <Container textAlign='center'>
-        <Button as='a' size='massive' color="pink" style={{ margin: '3em 0em' }}>
+        <Button as='a' 
+                href='https://www.linkedin.com/in/dev-howey/' 
+                target='_blank' 
+                rel='noreferrer' 
+                size='massive' 
+                color='pink' 
+                style={{ marginTop: '2em' }}>
           Contact
         </Button>
       </Container>

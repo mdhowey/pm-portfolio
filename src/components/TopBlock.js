@@ -146,17 +146,17 @@ export default class TopBlock extends Component {
             >
               <Menu.Item>
                 <Icon name='linkedin' />
-                LinkedIn
+                <a href='https://www.linkedin.com/in/dev-howey/' target='_blank' rel='noreferrer'>LinkedIn</a>
               </Menu.Item>
 
               <Menu.Item>
                 <Icon name='github' />
-                GitHub
+                <a href='https://github.com/mdhowey' target='_blank' rel='noreferrer'>GitHub</a>
               </Menu.Item>
 
               <Menu.Item>
                 <Icon name='medium' />
-                Medium
+                <a href='https://medium.com/@dev.howey' target='_blank' rel='noreferrer'>Medium</a>
               </Menu.Item>
             </Menu>
           </div>

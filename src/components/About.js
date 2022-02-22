@@ -24,7 +24,13 @@ export const About = () => {
           Life has been good for Howey, but he is looking for more. When the pandemic rocked the world in 2020, he realized it was time for a change and enrolled in university yet again this time to study computer science. With a coding bootcamp finished, Howey is building websites and web-based applications for clients. Hes also managing projects and writing SEO content. He would love to talk to you about how he could be an asset to your team.
         </p>
         <Container textAlign='center'>
-          <Button as='a' size='massive' color="pink" style={{ marginTop: '4em' }}>
+          <Button as='a' 
+                  href='https://www.linkedin.com/in/dev-howey/' 
+                  target='_blank' 
+                  rel='noreferrer' 
+                  size='massive' 
+                  color='pink' 
+                  style={{ marginTop: '2em' }}>
             Contact
           </Button>
         </Container>
