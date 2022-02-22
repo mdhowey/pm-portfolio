@@ -1,7 +1,6 @@
 import {
   Container,
-  Divider,
-  Grid,
+  Label,
   Header,
   List,
   Segment,
@@ -10,38 +9,32 @@ import { Footer } from './Footer'
 import { About } from './About'
 import TopBlock from './TopBlock'
 import { Recommendations } from './Recommendations'
+import { Project } from './Project'
 
 const FixedMenuLayout = () => (
   <div>
     <Container text>
-      
+
       <TopBlock />
 
       <About />
 
       <Recommendations />
-
-      <Header as='h2'>Experience</Header>
+      <span id='projects-section'></span>
+      <Header style={{ margin: '3em 0em', fontSize: '2.5em' }} as='h2' textAlign='center'>Projects</Header>
+      <Project />
+      <span id='experience-section'></span>
+      <Header style={{ margin: '3em 0em', fontSize: '2.5em' }} as='h2' textAlign='center'>Experience</Header>
       <Header as='h3'>Management</Header>
       <List>
         <List.Item>
-          <List.Header>EcomByJake</List.Header>
+          <List.Header>Project Manager</List.Header>
         </List.Item>
         <List.Item>
-          Project Manager
-        </List.Item>
-        <Segment color='violet' vertical>
-          Breakdown challenging concepts to students who are new to different technologies.
-        </Segment>
-        <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
-        <Segment vertical>
-          Prioritization of student issues across multiple projects.
-        </Segment>
-        <List.Item>
-          <List.Header>Ladina</List.Header>
-        </List.Item>
-        <List.Item>
-          Bar Manager
+          <Label color='teal'>
+            Current
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>EcomByJake</span>
         </List.Item>
         <Segment color='violet' vertical>
           Breakdown challenging concepts to students who are new to different technologies.
@@ -51,10 +44,29 @@ const FixedMenuLayout = () => (
           Prioritization of student issues across multiple projects.
         </Segment>
         <List.Item>
-          <List.Header>Mezzaluna</List.Header>
+          <List.Header>Bar Manager</List.Header>
         </List.Item>
         <List.Item>
-          Assistnat General Manager
+          <Label color='orange'>
+            2+ Years
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>Ladina</span>
+        </List.Item>
+        <Segment color='violet' vertical>
+          Breakdown challenging concepts to students who are new to different technologies.
+        </Segment>
+        <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
+        <Segment vertical>
+          Prioritization of student issues across multiple projects.
+        </Segment>
+        <List.Item>
+          <List.Header>Assistant General Manager</List.Header>
+        </List.Item>
+        <List.Item>
+          <Label color='orange'>
+            4+ Years
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>Mezzaluna</span>
         </List.Item>
         <Segment color='violet' vertical>
           Breakdown challenging concepts to students who are new to different technologies.
@@ -67,23 +79,13 @@ const FixedMenuLayout = () => (
       <Header as='h3'>Teaching</Header>
       <List>
         <List.Item>
-          <List.Header>General Assembly</List.Header>
+          <List.Header>Teaching Assistant</List.Header>
         </List.Item>
         <List.Item>
-          Teaching Assistant
-        </List.Item>
-        <Segment color='green' vertical>
-          Breakdown challenging concepts to students who are new to different technologies.
-        </Segment>
-        <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
-        <Segment vertical>
-          Prioritization of student issues across multiple projects.
-        </Segment>
-        <List.Item>
-          <List.Header>Open English</List.Header>
-        </List.Item>
-        <List.Item>
-          English Teacher
+          <Label color='teal'>
+            Current
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>General Assembly</span>
         </List.Item>
         <Segment color='green' vertical>
           Breakdown challenging concepts to students who are new to different technologies.
@@ -93,10 +95,32 @@ const FixedMenuLayout = () => (
           Prioritization of student issues across multiple projects.
         </Segment>
         <List.Item>
-          <List.Header>Wisdom Escuelas</List.Header>
+          <List.Header>English Teacher</List.Header>
         </List.Item>
         <List.Item>
-          English Teacher
+          <Label color='orange'>
+            2+ Years
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>Open English</span>
+        </List.Item>
+        <Segment color='green' vertical>
+          Breakdown challenging concepts to students who are new to different technologies.
+        </Segment>
+        <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
+        <Segment vertical>
+          Prioritization of student issues across multiple projects.
+        </Segment>
+        <List.Item>
+          <List.Header>English Teacher</List.Header>
+        </List.Item>
+        <List.Item>
+          <Label color='orange'>
+            2+ Years
+          </Label>
+          <Label color='purple'>
+            Self-employed
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>Slick Speak</span>
         </List.Item>
         <Segment color='green' vertical>
           Breakdown challenging concepts to students who are new to different technologies.
@@ -109,10 +133,13 @@ const FixedMenuLayout = () => (
       <Header as='h3'>Web Development</Header>
       <List>
         <List.Item>
-          <List.Header>EcomByJake</List.Header>
+          <List.Header>Web Developer</List.Header>
         </List.Item>
         <List.Item>
-          Web Developer
+          <Label color='teal'>
+            Current
+          </Label>
+          <span style={{ marginLeft: '4px', color: 'darkslategrey' }}>EcomByJake</span>
         </List.Item>
         <Segment color='pink' vertical>
           Breakdown challenging concepts to students who are new to different technologies.
@@ -122,23 +149,6 @@ const FixedMenuLayout = () => (
           Prioritization of student issues across multiple projects.
         </Segment>
       </List>
-      <Header as='h2'>Projects</Header>
-      <Header as='h3'>edik.ly</Header>
-      <Segment color='olive' vertical>
-        Breakdown challenging concepts to students who are new to different technologies.
-      </Segment>
-      <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
-      <Segment vertical>
-        Prioritization of student issues across multiple projects.
-      </Segment>
-      <Header as='h3'>Wayfarer</Header>
-      <Segment color='olive' vertical>
-        Breakdown challenging concepts to students who are new to different technologies.
-      </Segment>
-      <Segment vertical>Work directly with students to debug issues in their assignments and projects.</Segment>
-      <Segment vertical>
-        Prioritization of student issues across multiple projects.
-      </Segment>
     </Container>
     <Footer />
   </div>

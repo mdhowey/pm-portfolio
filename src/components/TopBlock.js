@@ -51,13 +51,18 @@ const fixedOverlayMenuStyle = {
 }
 
 export default class TopBlock extends Component {
+  // Stiky top nav and sidebar social media icons
   state = {
     menuFixed: false,
     overlayFixed: false,
   }
+  // Selected menu item
+  selected = { activeItem: 'closest' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   handleOverlayRef = (c) => {
-    const { overlayRect } = this.state
+    const { overlayRect } = this.selected
 
     if (!overlayRect) {
       this.setState({ overlayRect: _.pick(c.getBoundingClientRect(), 'height', 'width') })
@@ -74,7 +79,7 @@ export default class TopBlock extends Component {
 
   render() {
     const { menuFixed, overlayFixed, overlayRect } = this.state
-
+    const { activeItem } = this.state
     return (
       <div>
         <Visibility
@@ -92,31 +97,39 @@ export default class TopBlock extends Component {
                 <GiDrumKit />
               </Menu.Item>
               <Menu.Item header>devhowey</Menu.Item>
-              <Menu.Item as='a'target=''>Experience</Menu.Item>
-              <Menu.Item as='a'>Projects</Menu.Item>
-
-              <Menu.Menu position='right'>
-                <Dropdown text='More' pointing className='link item'>
-                  <Dropdown.Menu>
-                    <Dropdown.Item>About</Dropdown.Item>
-                    <Dropdown.Item>Contact</Dropdown.Item>
-                    <Dropdown.Header>Other Skills</Dropdown.Header>
-                    <Dropdown.Item as='a'>Web Development</Dropdown.Item>
-                    <Dropdown.Item as='a'>SEO</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Menu.Menu>
+              <Menu.Item as='a'
+                name='About'
+                active={activeItem === 'About'}
+                onClick={this.handleItemClick}
+                href="/#about-section"
+              />
+              <Menu.Item as='a'
+                name='Projects'
+                active={activeItem === 'Projects'}
+                onClick={this.handleItemClick}
+                href="/#projects-section"
+              />
+              <Menu.Item as='a'
+                name='Experience'
+                active={activeItem === 'Experience'}
+                onClick={this.handleItemClick}
+                href="/#experience-section"
+              />
             </Container>
           </Menu>
         </Visibility>
         <Container text style={{ marginTop: '2em' }}>
           <Header as='h1' style={{ marginBottom: '1em', fontSize: '4em' }}>Michael D. Howey</Header>
           <Header as='h1' style={{ marginBottom: '1em', fontSize: '2.5em' }}>Project Manager</Header>
-          <Image src='https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' fluid style={{ marginBottom: '4em' }} />
+          <Container textAlign='center' style={{ marginTop: '5em' }}>
+            <Icon name='angle double down' size='big' color='pink' />
+          </Container>
         </Container>
 
-        <Container text>
+        <div id='about-section' ></div>
+        <Image src='https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' fluid style={{ margin: '4em 0em' }} />
 
+        <Container text>
           <Visibility
             offset={80}
             once={false}
